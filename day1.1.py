@@ -2262,21 +2262,15 @@ input = """22243
 """
 
 calories = input.split("\n")
-mostCalories = []
+mostCalories = 0
 currentCalories = 0
-totalCalories = 0
 
 for calory in calories:
     if not calory:
-        mostCalories.append(currentCalories)
+        if currentCalories > mostCalories:
+            mostCalories = currentCalories
         currentCalories = 0
     else:
         currentCalories += int(calory)
 
-mostCalories.sort()
-mostCalories.reverse()
-
-for calory in mostCalories[:3]:
-    totalCalories += calory
-
-print(totalCalories)
+print(mostCalories)
