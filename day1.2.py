@@ -1,4 +1,4 @@
-"""Andvent of code 2022 day 1"""
+"""Andvent of code 2022 day 1.2"""
 
 input = """22243
 11899
